@@ -5,9 +5,16 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/demo-a/pom.xml" />
-        <option value="$PROJECT_DIR$/demo-b/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-entity/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-dao/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-web/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-service/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/demo-server/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">

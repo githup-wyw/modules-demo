@@ -1,0 +1,32 @@
+
+spring:
+  datasource:
+    name: test
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      filters: stat
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://47.107.255.104:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: 123456
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+  redis:
+    database: 0
+    host: 47.107.255.104
+    port: 6379
+    password:
+    timeout: 5000ms
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+mybatis:
+  mapper-locations: classpath:mybatis/*.xml
+  type-aliases-package: com.wyw.entity
+  configuration:
+    map-underscore-to-camel-case: true

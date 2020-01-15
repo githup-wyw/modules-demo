@@ -7,11 +7,14 @@
     <groupId>com.wyw</groupId>
     <artifactId>modules-demo</artifactId>
     <version>1.0</version>
+    <packaging>pom</packaging>
 
     <!--子模块工厂配置-->
     <modules>
-        <module>demo-a</module>
-        <module>demo-b</module>
+        <module>demo-entity</module>
+        <module>demo-dao</module>
+        <module>demo-service</module>
+        <module>demo-web</module>
     </modules>
 
     <!--Spring Boot配置-->
@@ -28,26 +31,30 @@
     </properties>
 
     <dependencies>
+        <!--Spring Boot Web组件-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <!--Spring Boot 测试组件-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!--Spring Boot Web组件-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <!--lombok 插件依赖-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
+
     </dependencies>
 
-
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
 
 </project>
